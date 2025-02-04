@@ -1,0 +1,6 @@
+__pycache__
+.savenv
+models
+llamatest.py
+openo1.py
+.env
