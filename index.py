@@ -111,12 +111,12 @@ def augmented_query_to_llm(query_text, k=5):
     print(f"Top {k} similar records: {similar_records}")
 
     system_prompt = """You are an AI assistant helping with risk analysis of threats and vulnerabilities in a mission critical system. 
-    Important guidelines:
-    - Each time you respond, provide the threat ID, vulnerability id and countermeasures where necessary
-    - Provide clear, concise answers without repetition
-    - If you've made your point, move on to the next one
-    - Stay focused on the specific question asked
-    - If you're unsure about something, say so and move on
+    I will provide different scenarios and I want you to query your knowledge base to answer.
+    Give the output in this format:
+    - threat ID, 
+    - vulnerability ID,
+    - countermeasure ID
+    - Your reasoning about the scenario.
     """
     
     # Step 6.2: Combine the similar records into a single string (to augment the query)
@@ -157,7 +157,7 @@ def augmented_query_to_llm(query_text, k=5):
 
 # Example query
 # query = input("Enter your query: ")
-query = "What threat id is associated with the accidential damage of media? Also give me the all the vulnerabilities associated with it and countermeasures."
+query = " The processing center is located in the basement. A sewer system runs under the building. The walls of the room that houses the processing center are not reinforced."
 augmented_query_to_llm(query, k=3)
 
 # print("Llama Response:", response)
