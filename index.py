@@ -157,7 +157,7 @@ def augmented_query_to_llm(query_text, k=5):
 
 # Example query
 # query = input("Enter your query: ")
-query = " The processing center is located in the basement. A sewer system runs under the building. The walls of the room that houses the processing center are not reinforced."
+query = " What thread is associated to an ID of M3?" "
 augmented_query_to_llm(query, k=3)
 
 # print("Llama Response:", response)
